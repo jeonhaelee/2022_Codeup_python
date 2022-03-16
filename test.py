@@ -1,2 +1,2 @@
 print(12345)
-print(12345678910)
+print('hello')
