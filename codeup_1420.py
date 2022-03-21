@@ -1,12 +1,10 @@
+import operator
+
 n = int(input())
 d = []
 for i in range(n):
     d.append(input().split())
-    
-dic = {}
+    d[i][1] = int(d[i][1])
+d.sort(key = lambda x:-x[1])
 
-for i in range(n):
-    dic[d[i][0]] = d[i][1]
-
-        
-print(dic)
+print(d[2][0])
