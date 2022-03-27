@@ -7,14 +7,13 @@ for i in range(n):
 
 answer = []
 for i in range(len(d)):
-    min = d[0]
-    for j in range(len(d)):
-        if d[j] < min:
-            min = d[j]
-    answer.append(min)
-    del d[d.index(min)]
+    for j in range(len(d)-1):
+        if d[j] > d[j+1]:
+            temp = d[j]
+            d[j] = d[j+1]
+            d[j+1] = temp
 
-for i in answer:
+for i in d:
     print(i)
     
     
