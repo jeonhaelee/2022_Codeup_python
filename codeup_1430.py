@@ -1,23 +1,21 @@
 
-n = int(input())
-d = list(map(int,input().split()))
+import sys
+import numpy as np
 
-m = int(input())
-q = input()
+n = int(sys.stdin.readline().rstrip())
+d1 = sys.stdin.readline().rstrip()
+origin = np.array(d1.split())
 
-num = ""
-for i in range(len(q)):
-    if q[i] == " ":
-        if int(num) in d:
-            print(1, end = " ")
-        else : print(0, end = " ")
-        num = ""
-        continue
-    num += q[i]
-if int(num) in d:
-    print(1, end = " ")
-else : print(0, end = " ")
-    
+m = int(sys.stdin.readline().rstrip())
+d2 = sys.stdin.readline().rstrip()
+test = np.array(d2.split())
+
+for i in test:
+    if i in origin:
+        print(1, end = " ")
+    else : print(0, end = " ")
+
+
 
    
 
