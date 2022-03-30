@@ -10,14 +10,21 @@ import numpy as np
 n = int(input())
 d = np.array(input().split(), dtype=int)
 
-over = int(d[np.argmax(d)]) + 1
+c = [0] * 100001
+answer = [0] * n
+    
+for i in d:
+    c[i] += 1
+    
+for i in range(1,100001):
+    c[i] += c[i-1]
+   
 for i in range(n):
-    min = d[np.argmin(d)]
-    print(min, end = " ")
-    d[np.argmin(d)] = over
+    answer[c[d[i]]-1] = d[i]
+    c[d[i]] -= 1
 
-
-
+for i in answer:
+    print(i, end = " ")
 
 
 
