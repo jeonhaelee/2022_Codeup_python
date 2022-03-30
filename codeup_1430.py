@@ -20,11 +20,11 @@ import sys
 import numpy as np
 
 n = int(sys.stdin.readline().rstrip())
-d1 = np.zeros(10000000, dtype=int)
+d1 = np.zeros(n, dtype=int)
 d1 = sys.stdin.readline().rstrip().split()
 
 m = int(sys.stdin.readline().rstrip())
-d2 = np.arange(100000, dtype=int)
+d2 = np.arange(m, dtype=int)
 d2 = sys.stdin.readline().rstrip().split()
 
 for i in d2:
