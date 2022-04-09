@@ -16,22 +16,19 @@
 #     else : print(0, end = " ")
 
 
-import sys
-import numpy as np
+# import sys
+# import numpy as np
 
-n = int(sys.stdin.readline().rstrip())
-d1 = np.zeros(n, dtype=int)
-d1 = sys.stdin.readline().rstrip().split()
+# n = int(sys.stdin.readline().rstrip())
+# d1 = np.zeros(n, dtype=int)
+# d1 = sys.stdin.readline().rstrip().split()
 
-m = int(sys.stdin.readline().rstrip())
-d2 = np.arange(m, dtype=int)
-d2 = sys.stdin.readline().rstrip().split()
+# m = int(sys.stdin.readline().rstrip())
+# d2 = np.arange(m, dtype=int)
+# d2 = sys.stdin.readline().rstrip().split()
 
-for i in d2:
-    if i in d1:
-        print(1, end = " ")
-    else : print(0, end = " ")
+# for i in d2:
+#     if i in d1:
+#         print(1, end = " ")
+#     else : print(0, end = " ")
 
-
-
-        
