@@ -1,4 +1,5 @@
 
+
 class Ques():
     def __init__(self, n):
         self.n = n
@@ -16,9 +17,18 @@ class Ques():
             self.d.append(int(self.n))
             self.f()
 
-
+def get_list(result, idx):
+    if idx >= 0:
+        print(result[idx])
+        idx -= 1
+        get_list(result, idx)
+    else: return 0
+    
 n = int(input())
+
 ques = Ques(n)
 ques.f()
 result = ques.d
-print(result)
+
+idx = len(result) - 1
+get_list(result, idx)
