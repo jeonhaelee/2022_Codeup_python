@@ -9,7 +9,8 @@ class stack:
             print(-1)
         else: print(self.d[-1])
     def pop(self):
-        del self.d[-1]
+        if len(self.d) != 0:
+            del self.d[-1]
     def size(self):
         print(len(self.d))
     def empty(self):
@@ -22,7 +23,7 @@ n = int(input())
 for i in range(n):
     command = input()
     if command[:4] == 'push':
-        num = int(command[6])
+        num = command[6:len(command)-2]
         stack1.push(num)
     elif command[:3] == 'top':
         stack1.top()
