@@ -4,13 +4,21 @@
 n = int(input())
 m = int(input())
 
-d = [1]
+d = []
 for i in range(m):
     a, b = map(int,input().split())
-    if a in d:
-        d.append(b)
-    elif b in d:
-        d.append(a)
+    d.append((a, b))
 
-d = set(d)
-print(len(d))
+answer = []
+for i in range(m):
+    if d[i][0] == 1 or d[i][1] == 1:
+        answer.append(d[i][0])
+        answer.append(d[i][1])
+answer = list(set(answer))
+for j in range(n):
+    for i in range(m):
+        if d[i][0] in answer or d[i][1] in answer:
+            answer.append(d[i][0])
+            answer.append(d[i][1])
+            answer = list(set(answer))
+print(len(answer))
