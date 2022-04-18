@@ -1,6 +1,4 @@
 
-
-
 n = int(input())
 m = int(input())
 
@@ -21,4 +19,4 @@ for j in range(n):
             answer.append(d[i][0])
             answer.append(d[i][1])
             answer = list(set(answer))
-print(len(answer))
+print(len(answer)-1)
