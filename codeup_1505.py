@@ -45,5 +45,7 @@ while 0 in d:
         count += 1
 
 
-
-print(d)
+for i in range(n):
+    for j in range(n):
+        print(d[i, j], end = " ")
+    print()
