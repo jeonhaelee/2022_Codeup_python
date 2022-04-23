@@ -1,18 +1,19 @@
 
 
-def f(a, b):
+n, k = map(int,input().split())
+
+def f(n, k):
     answer = 1
-    if b == 1:
-        answer = a
+    if k == 1:
+        answer = n
         return answer
-    elif a == b:
+    elif n == k:
         return answer
     else:
-        for i in range(b):
-            answer *= (a - i)
-        return answer
+        for i in range(k):
+            answer *= (n - i)
+        return answer/k
 
-a, b = map(int,input().split())
-answer = f(a, b)
+answer = f(n, k)
 
 print(int(answer))
