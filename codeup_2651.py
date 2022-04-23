@@ -1,4 +1,5 @@
 
+import math
 
 n, k = map(int,input().split())
 
@@ -12,8 +13,7 @@ def f(n, k):
     else:
         for i in range(k):
             answer *= (n - i)
-        return answer/k
-
+        return answer/math.factorial(k)
 answer = f(n, k)
 
 print(int(answer))
