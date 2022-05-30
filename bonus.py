@@ -33,35 +33,41 @@ def makeLinkedList(arr):
 
 def make_3arr(input_arr):
     input_arr = input_arr
-    arr1 = []; arr2 = []; arr3 = []
-    for i in range(5):
+    li1 = []; li2 = []; li3 = []
+    arr1 = Node(); arr2 = Node(); arr3 = Node()
+    for i in range(len(input_arr)):
         a, b, c = input_arr[i].split('')
-        arr1.append(a)
-        arr2.append(b)
-        arr3.append(c)
+        li1.append(a)
+        li2.append(b)
+        li3.append(c)
+    arr1.data = li1
+    arr2.data = li2
+    arr3.data = li3
     return arr1, arr2, arr3
 
     # 목표: 연결리스트에 넣을 데이터인 '자리수가 동일한 숫자들로 구성된 3개의 배열' 반환 (1점)
     
 
 def makeDigits(node):
-    """
-    node: 연결리스트
-    """
+    li = node.data
+    number = ""
+    for i in range(len(li)-1, -1, -1):
+        number += li[i]
+    return int(number)
     # 목표: 거꾸로 삽입된 연결리스트가 나타내는 5자리 정수 만들기 (3점)
 
 
 def makeReversedLinkedList(number):
-    """
-    number: 출력할 숫자
-    """
+    number = str(number)
+    li = []
+    for i in range(len(number)-1,-1,-1):
+        li.append(number[i])
     # 목표: 숫자를 받아 거꾸로 삽입된 연결리스트 만들기 (3점)
     
 
 def addNumber(node1, node2, node3):
-    """
-    node1, node2, node3: 연결리스트
-    """
+    result_num = makeDigit(node1) + makeDigit(node2) + makeDigit(node3)
+    return makeReveredLinkedList(result_num)[0]
     # 목표: 3개의 연결리스트가 나타내는 정수 3개의 합으로 거꾸로 삽입된 연결리스트의 시작 노드 반환 (3점)
     # 조건: makeDigits(), makeReveredLinkedList() 사용 (조건 어길 시, 해당 함수 구현 0점 처리)
 
